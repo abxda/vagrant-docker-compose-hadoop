@@ -13,11 +13,12 @@ Vagrant.configure("2") do |config|
       v.vmx["memsize"] = "4096"
       v.vmx["numvcpus"] = "4"
   end
+  config.vm.provision "shell", path: "install-hadoop-client.sh"
   
   config.vm.provision :docker
   config.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", run: "always"
   
-  config.vm.provision "shell", path: "install-hadoop-client.sh"
+  
  
 end
 

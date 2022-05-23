@@ -15,5 +15,6 @@ cd /tmp && \
     sudo rm hadoop-${HADOOP_VERSION}.tar.gz
 cd /usr/local && sudo ln -s hadoop-3.2.1 hadoop
 
+export COMPOSE_HTTP_TIMEOUT=30000
 
 sudo cp /vagrant/scripts/myenvvars.sh /etc/profile.d/myenvvars.sh
