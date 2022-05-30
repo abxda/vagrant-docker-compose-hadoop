@@ -7,8 +7,7 @@
  sudo apt-get install --no-install-recommends -y openjdk-8-jre-headless ca-certificates-java && \
  sudo rm -rf /var/lib/apt/lists/*
  
- #sudo apt-get install python3.8
-
+ 
 # Install hadoop
 cd /tmp && \
     wget http://archive.apache.org/dist/hadoop/common/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz && \
