@@ -6,7 +6,13 @@
  sudo apt-get -y update && \
  sudo apt-get install --no-install-recommends -y openjdk-8-jre-headless ca-certificates-java && \
  sudo rm -rf /var/lib/apt/lists/*
- 
+
+# Install spark-client
+ sudo apt-get -y install software-properties-common
+ sudo apt-add-repository -y universe
+ sudo apt-get -y update
+ sudo apt-get -y install python-pip
+ pip --no-cache-dir install pyspark==3.0.0
  
 # Install hadoop
 cd /tmp && \
@@ -18,3 +24,7 @@ cd /usr/local && sudo ln -s hadoop-3.2.1 hadoop
 export COMPOSE_HTTP_TIMEOUT=30000
 
 sudo cp /vagrant/scripts/myenvvars.sh /etc/profile.d/myenvvars.sh
+
+
+
+
